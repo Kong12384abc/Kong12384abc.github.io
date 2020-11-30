@@ -1,0 +1,24 @@
+local websiteurl = "http://yourwebsite.website.web" -- with https://
+local phpfilename = "white.php" -- add .php
+local ip = game:HttpGet("https://api.ipify.org")
+
+
+function checkkey(key)
+local web = game:HttpGet(websiteurl..'/'..phpfilename..'?check='..key, true)
+if string.find(web,"true") then
+return true
+else
+   return false
+end
+end
+
+if _G.Key then
+   if checkkey(_G.Key) then
+   print("Script here")
+   --SCRIPT HEREEEEEEE
+else
+   game.Players.LocalPlayer:Kick("no")
+end
+else
+   print("Enter Key")
+end

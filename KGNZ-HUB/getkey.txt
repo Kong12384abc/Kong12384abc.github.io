@@ -1,0 +1,6 @@
+function getk1ey(websiteurl,phpfilename)
+       local key = game:HttpGet(websiteurl..'/'..phpfilename..'?c=ip', true)
+       syn_clipboard_set(key) -- change it
+       game.Players.LocalPlayer:Kick("Key Copied!")
+end
+getk1ey("website.url.com","filename (ex : white.php)")
